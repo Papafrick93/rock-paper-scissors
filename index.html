@@ -36,7 +36,7 @@
                     console.log("Tie, play again");
                     result = playRound();
                 }
-            } else {
+            } else if (playerSelection === "SCISSORS") {
                 if (computerSelection === "ROCK") {
                     result = "You Lose! Rock beats Scissors";
                 } else if (computerSelection === "PAPER") {
@@ -45,6 +45,9 @@
                     console.log("Tie, play again");
                     result = playRound();
                 }
+            } else {
+                console.log("Invalid choice, pick again!");
+                result = playRound();
             }
             return result;
         }
